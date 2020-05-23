@@ -1,0 +1,703 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+#nagivation_bar{
+	height: 100%;
+	width: 20%;
+	background-color: lightblue;
+	float: left;
+	position: absolute;
+}
+
+#nagivation_bar h1{
+	width: 100%;
+	text-align: center;
+	font-size: 2.5vw;
+}
+
+#total_company_filter_container{
+	width: 90%;
+	height: 40px;
+	margin-bottom: 15px;
+}
+
+.total_company_filter_content{
+	width: 33.3%;
+	height: 100%;
+	float: left;
+}
+
+#company_staff_filter{
+	text-align: center;
+}
+
+#person_to_assign_filter{
+	margin: auto;
+	border: solid 1px #ddd;
+	background-image: url('filter.png');
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	width: 85%;
+	padding: 10px 0% 10px 5%;
+	margin: 15px 0 15px 0;
+	font-size: 16px;
+	outline: none;
+}
+
+#nagivation_bar #selected_nagivation_bar_link{
+	background-color: white;
+}
+
+#nagivation_bar .nagivation_bar_link{
+	list-style: none;
+	text-align: center;
+	padding: 8px;
+}
+
+#nagivation_bar li:hover, #person_to_assign div:hover{
+	cursor: pointer;
+}
+
+#nagivation_bar #status_container{
+	background-color: black;
+	border-radius: 5px;
+	padding: 5px;
+	width: 80%;
+	height: 5%;
+	bottom: 0px;
+	opacity: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: absolute;
+}
+
+#status_container p{
+	color: #fff;
+	left: 50%;
+	top: 0%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	position: relative;
+}
+
+#selected_function_full_container{
+	display: inline;
+}
+
+.company_id_detection, .job_progress_audit_work_id_detection{
+	display: none;
+}
+
+.function_full_container{
+	display: none;
+	right: 0;
+	height: 100%;
+	width: 80%;
+	position: fixed;
+	overflow: auto;
+}
+
+#company_container{
+	width: 80%;
+	height: 90%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#add_company_pop_up_full_container, #person_to_assign_container{
+	height: 100%;
+	width: 100%;
+	display: none;
+	background-color: rgba(179, 179, 179, .8);
+	position: absolute;
+	z-index: 2;
+}
+
+#add_company_pop_up_container{
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -30%);
+	position: relative;
+	height: 70%;
+	width: 50%;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+}
+
+#add_company_pop_up_title h1{
+	font-size: 2vw;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+#person_to_assign{
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -30%);
+	position: relative;
+	height: 80%;
+	width: 80%;
+	background-color: white;
+	overflow: auto;
+}
+
+#person_to_assign_container #company_close_btn{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+#add_company_pop_up_container input{
+	border: none;
+	padding: 7px;
+	border-radius: 5px;
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 35%;
+}
+
+#add_company_pop_up_container #add_company_pop_up_btn{
+	background-color: lightblue;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	width: 20%;
+	margin: auto;
+	display: block;
+	outline: none;
+	margin-top: 10px;
+}
+
+#company_nagivation_bar{
+	height: 7%;
+	width: 100%;
+	text-align: center;
+	background-color: lightblue;
+}
+
+#company_nagivation_bar h1{
+	margin: 0;
+	font-size: 2vw;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#company_nagivation_bar #add_company_btn{
+	float: right;
+	height: 70%;
+	margin-top: .4vw;
+	margin-right: .4vw;
+}
+
+#add_company_pop_up_full_container #company_close_btn{
+	right: 10px;
+	top: 10px;
+	position: fixed;
+}
+
+.btn:hover{
+	cursor: pointer;
+}
+
+.appointment_aid{
+	display: none;
+}
+
+#company_table{
+	height: 93%;
+	width: 100%;
+}
+
+.add_person_btn{
+	height: 20px;
+	width: 20px;
+}
+
+.add_person_btn:hover{
+	cursor: pointer;
+}
+
+table, th, td{
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table{
+	width: 100%;
+}
+
+th{
+	background-color: #ff3333;
+	padding: 5px;
+	color: white;
+}
+
+.even_row{
+	background-color: #f2f2f2;
+}
+
+#person_to_assign h1{
+	border-bottom: solid 1px #ddd;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
+
+.person_list_container{
+	border-bottom: solid 1px #ddd;
+	position: relative;
+	height: 20%;
+}
+
+.image_container{
+	width: 20%;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+.image_container img{
+	width: 3vw;
+	height: 3vw;
+	left: 50%;
+	top: 30%;
+	position: absolute;
+	transform: translate(-50%, -30%);
+}
+
+.image_container h2{
+	position: absolute;
+	bottom: 10px;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.7vw;
+}
+
+.pofile_container{
+	width: 80%;
+	height: 100%;
+	position: relative;
+	float: right;
+}
+
+.pofile_container h3{
+	background-color: #ffeead;
+	border-radius: 5px;
+	width: 25%;
+	font-size: 1vw;
+	float: left;
+	margin: 5px 5px 0 0;
+	padding: 5px;
+}
+
+/*Appointment*/
+#appointment_full_container{
+	width: 80%;
+	margin: auto;
+	margin-top: 6%;
+	position: relative;
+}
+
+#make_appointment_container{
+	background-color: #f2f2f2;
+	padding: 1% 0 1% 0;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 1%;
+	width: 80%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#make_appointment_container:hover{
+	cursor: pointer;
+}
+
+.appointment_container{
+	margin-top: 1.5%;
+	background-color: #f2f2f2;
+	border-radius: 3px;
+	height: 180px;
+	width: 100%;
+	position: relative;
+}
+
+.appointment_icon_container{
+	height: 10%
+}
+
+.appointment_icon_container img{
+	height: 100%;
+	margin: .5% .5% 0 .5%;
+	float: right;
+}
+
+.appointment_icon_container img:hover{
+	cursor: pointer;
+}
+
+.appointment_upper_container{
+	height: 20%;
+	width: 80%;
+	margin: auto;
+}
+
+.appointment_upper_container input{
+	margin: 0;
+	float: left;
+	font-size: 24px;
+	width: 30%;
+	background-color: #f2f2f2;
+	border: none;
+	outline: none;
+}
+
+.appointment_lower_container{
+	height: 70%;
+}
+
+.appointment_lower_container_content{
+	width: 80%;
+	position: relative;
+	margin: auto;
+	margin-top: 1%;
+}
+
+.appointment_lower_container_content textarea{
+	width: 100%;
+	outline: none;
+	border: none;
+	margin: 0;
+	resize: none;
+	border-radius: 3px;
+}
+
+#appointment_form_container{
+	background-color: rgba(179, 179, 179, .8);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#appointment_form{
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	height: 50%;
+	width: 60%;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
+}
+
+#appointment_form input{
+	border-radius: 3px;
+	border: none;
+	float: left;
+	width: 25%;
+	height: 5%;
+	padding: 1%;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+#appointment_form textarea{
+	resize: none;
+	border: none;
+	width: 90%;
+	border-radius: 5px;
+	height: 50%;
+	bottom: 22%;
+	left: 55%;
+	transform: translate(-55%, 0);
+	position: absolute;
+}
+
+#appointment_form button{
+	bottom: 7%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border: none;
+	padding: 1%;
+	width: 40%;
+	border-radius: 5px;
+	background-color: lightblue;
+}
+
+#appointment_form button:hover{
+	cursor: pointer;
+}
+
+#appointment_close_btn{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+#manager_appointment_full_container{
+	width: 80%;
+	margin: auto;
+}
+
+.manager_appointment_submit_btn{
+	position: absolute;
+	border: none;
+	bottom: 7%;
+	padding: .5%;
+	width: 20%;
+	border-radius: 5px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: lightblue;
+}
+
+.manager_appointment_submit_btn:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Job Progress*/
+#job_progress_full_container{ 
+	width: 80%;
+	height: 100%;
+	margin: auto;
+}
+
+.job_progress_container{
+	height: 15%;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	background-color: #f2f2f2;
+}
+
+.job_progress_name{
+	height: 55px;
+	position: relative;
+
+}
+
+#job_progress_name_content_first{
+	width: 80%;
+	float: left;
+}
+
+#job_progress_name_content_second{
+	width: 20%;
+	float: left;
+	text-align: right;
+	font-size: 10px;
+}
+
+.job_progress_name h1{
+	width: 100%;
+	margin: 0 0 2% 0;
+}
+
+#job_progress_name_content_second h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.job_progress_bar{
+	height: 5px;
+	width: 100%;
+	background-color: #ccc;
+}
+
+.progress_bar{
+	background-color: red;
+	height: 100%;
+}
+
+.job_details_container{
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	height: 70%;
+	margin-top: 3%;
+}
+
+.job_details_container table{
+	margin: auto;
+	width: 90%;
+	height: 100%;
+}
+
+.job_details_container td{
+	float: left;
+	width: 32.8%;
+	font-size: 1vw;
+	text-align: center;
+	position: relative;
+}
+
+.job_details_btn_container{
+	text-align: center;
+	padding: 0;
+	bottom: 0;
+	position: absolute;
+	width: 90%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.job_details_btn_container img:hover{
+	cursor: pointer;
+}
+
+.update_progress_btn{
+	right: 0;
+	position: absolute;
+}
+
+.update_progress_btn:hover{
+	cursor: pointer;
+}
+
+.job_progress_input{
+	text-align: center;
+	outline: none;
+	border: none;
+	background-color: #f2f2f2;
+	color: red;
+	position: relative;
+}
+
+.job_progress_input:hover{
+	cursor: default;
+}
+
+/*Report*/
+#report_nagivation_container{
+	position: relative;
+}
+
+#report_nagivation_container .report_nagivation_link{
+	text-align: center;
+	width: 50%;
+	float: left;
+	background-color: #f2f2f2;
+}
+
+#report_nagivation_container .report_nagivation_link:hover{
+	cursor: pointer;
+}
+
+.report_content_full_container{
+	display: none;
+}
+
+.report_content_container{
+	width: 80%;
+	margin: auto;
+	margin-top: 8%;
+	position: relative;
+}
+
+.company_report_div, .staff_report_div{
+	background-color: #f2f2f2;
+	border-bottom: solid 1px #ddd;
+}
+
+.report_content_container input{
+	border: solid 1px #ddd;
+	background-image: url('filter.png');
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	width: 70%;
+	padding: 10px 0px 10px 50px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	outline: none;
+}
+
+.report_content_container img{
+	position: absolute;
+	right: 3%;
+	top: 1%;
+}
+
+.report_content_container img:hover{
+	cursor: pointer;
+}
+
+@keyframes show_add_company_status{
+	from {bottom: 0px;
+		  opacity: 0;}
+	to {bottom: 30px;
+		opacity: 1;}
+}
+
+@keyframes hide_add_company_status{
+	from {bottom: 30px;
+		  opacity: 1;}
+	to {bottom: 0px;
+		opacity: 0;}
+}
+
+@keyframes show_job_progress_details_container{
+	from {height: 15%;}
+	to {height: 55%;}
+}
+
+@keyframes hide_job_progress_details_container{
+	from {height: 55%;}
+	to {height: 15%;}
+}
+
+@keyframes show_job_progress_details{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes hide_job_progress_details{
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+   
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #bfbfbf;
+}

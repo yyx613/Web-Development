@@ -1,0 +1,74 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+#background{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(#00d2ff, #928DAB);
+}
+
+#login_register_container{
+	background-color: rgba(140, 140, 140, .8);
+	position: absolute;
+	height: 70%;
+	width: 30%;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	border-radius: 10px;
+}
+
+#login_register_container h1{
+	color: white;
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+input[type='email'], input[type='text'], input[type='password']{
+	outline: none;
+	width: 70%;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	display: block;
+	margin: auto;
+	margin-bottom: 4%;
+}
+
+input[type='submit']{
+	outline: none;
+	width: 40%;
+	border: none;
+	padding: 7px;
+	border-radius: 7px;
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+	background-color: #00ccff;
+	cursor: pointer;
+	color: white;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#register_selection{
+	width: 40%;
+	position: relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	outline: none;
+}
+
+#login_register_link{
+	outline: none;
+	color: white;
+	text-decoration: none;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
