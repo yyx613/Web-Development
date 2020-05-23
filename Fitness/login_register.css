@@ -1,0 +1,159 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#background{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+
+#background img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+#form_container{
+	border-radius: 10px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 40vw;
+	width: 50%;
+	background-color: rgba(0,0,0,.5);
+}
+
+#login_container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+#register_container{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#login_container h1, #register_container h1{
+	margin: 0;
+	text-align: center;
+	color: white;
+	letter-spacing: 2px;
+	font-size: 2.5vw;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#user_image_container{
+	height: 10vw;
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+#user_image{
+	width: 20%;
+	margin: auto;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#user_image input{
+	display: none;
+}
+
+#user_image img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#radio_type_input{
+	color: white;
+	margin-bottom: 1vw;
+	text-align: center;
+	font-size: 1vw;
+}
+
+input[type="radio"]{
+	outline: none;
+}
+
+.switcher{
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-size: 1vw;
+	color: white;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+input[name="login_email"], input[name="login_password"], input[name="register_email"],
+input[name="register_username"], input[name="register_password"], input[name="register_confirm_password"]{
+	outline: none;
+	border: none;
+	display: block;
+	margin: auto;
+	margin-bottom: 1vw;
+	border-radius: 5px;
+	width: 50%;
+	padding: .5vw;
+	font-size: 1vw;
+}
+
+input[name="login_submit"], input[name="register_submit"]{
+	outline: none;
+	border: none;
+	display: block;
+	margin: auto;
+	margin-bottom: 1vw;
+	border-radius: 5px;
+	width: 20%;
+	padding: .5vw;
+	background-color: red;
+	color: white;
+	letter-spacing: 1px;
+	font-size: 1vw;
+}
+
+.input_message{
+	margin-top: -1%;
+	margin-bottom: 1%;
+	font-size: .9vw;
+	text-align: center;
+	color: white;
+}
+
+#register_message{
+	color: white;
+	margin-top: 1%;
+	font-size: 1vw;
+	text-align: center;
+}
+
+/*hover effect*/
+input[name="login_submit"]:hover, input[name="register_submit"]:hover, .switcher span{
+	cursor: pointer;
+}
+
+#user_image label:hover{
+	cursor: pointer;
+}
+
+
+@keyframes notification_in{
+	from {top: -10%; transform: translate(-50%,10%);}
+	to {top: 10%; transform: translate(-50%,-10%);}
+}
+
+@keyframes notification_out{
+	from {top: 10%; transform: translate(-50%,-10%);}
+	to {top: -10%; transform: translate(-50%,10%);}
+}
